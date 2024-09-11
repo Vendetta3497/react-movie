@@ -17,13 +17,14 @@ function App() {
 	const [type, setType] = useState('all');
 	const answer = <div className='reject'>{error}</div>;
 	
+	
 
 
 	 const getData = async (el, type) => {
 		setLoad(true);
 		setError(null);
 		try {
-			const data  = await fetch(`http://www.omdbapi.com/?apikey=52eccc1e&s=${!el ? 'movie': el} ${type !== 'all' ? `&type=${type}` : 'all'}`);
+			const data  = await fetch(`http://www.omdbapi.com/?apikey=52eccc1e&s=${el}${type !== 'all' ? `&type=${type}` : ''}`);
 			const response = await data.json();
 			setAllData(response.Search);
 			if (response.Search === undefined) {
@@ -38,7 +39,7 @@ function App() {
 	};
 					
 	useEffect(() => {
-		getData();
+		getData('movie', 'all');
 	}, []);
    
 	const nameOfMovies = (el) => {
