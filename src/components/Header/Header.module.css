@@ -1,0 +1,10 @@
+.header {
+   background: #5c5c9d;
+   padding: 20px;
+   text-align: center;
+   border-radius: 2px;
+}
+
+.header_title {
+   font-size: 36px;
+}

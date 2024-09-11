@@ -1,0 +1,29 @@
+
+.card {
+   /* margin-top: 30px; */
+   display: flex;
+   flex-direction: column;
+   border: 1px solid #333;
+   border-radius: 20px;
+}
+
+.card__img {
+  max-height: 250px;
+  
+  border-radius: 20px 20px 0 0;
+}
+
+.info-movie {
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   background-color: #fff;
+   border-radius: 0 0 20px 20px;
+   padding-top: 10px;
+}
+
+.info-movie__more {
+   display: flex;
+   justify-content: space-around;
+   padding: 10px;
+}

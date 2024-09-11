@@ -1,0 +1,9 @@
+.journal-movie {
+   margin: 0 auto ;
+   max-width: 900px;
+  text-align: center;
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(200px , 1fr));
+   gap: 20px;
+   padding: 50px 0;
+}
