@@ -1,4 +1,10 @@
 .button {
    border: none;
-   background: none;
+   background: linear-gradient(to right,  #8989ba 0%,#352831 100%);
+   padding: 10px;
+   border-radius: 20px;
+   font-size: 14px;
+   font-weight: 600;
+
 }
+

@@ -4,12 +4,22 @@
 
 body {
   margin: 0;
+ background: linear-gradient(to right,  #45484d 0%,#000000 100%);
+  ;
 }
 
-h1 {
+h1,h2,h3 {
   margin: 0;
 }
 
 button {
   cursor: pointer;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
 }

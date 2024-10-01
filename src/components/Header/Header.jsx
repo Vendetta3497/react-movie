@@ -1,11 +1,12 @@
 import styles from './Header.module.css';
 
-function Header() {
+function Header({ children }) {
 
 	return (
-		<div className={styles['header']}>
+		<header className={styles['header']}>
 			<h1 className={styles['header_title']}>React Movie</h1>
-		</div>
+			{ children }
+		</header>
 	);
 }
 
