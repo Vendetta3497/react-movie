@@ -9,7 +9,7 @@ import { MovieContext } from '../../context/MovieContext.jsx';
 function CardPages() {
 	const location = useLocation();
 	const { infoMovie } = location.state || {};
-	console.log(infoMovie);
+	// console.log(infoMovie);
 	const [valueOfButton, setValueOfButton] = useState('Favorite');
 
 	const { addMovie } = useContext(MovieContext);

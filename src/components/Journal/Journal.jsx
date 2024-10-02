@@ -20,6 +20,7 @@ function Journal({ data }) {
 						key={el.imdbID} 
 						onClick={() => movieNavigate(el)}>
 						<Card 
+							data={data}
 							item={el}
 							title={el.Title}
 							year={el.Year}

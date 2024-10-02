@@ -1,21 +1,16 @@
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import styles from './Card.module.css';
 import { MovieContext } from '../../context/MovieContext';
 
 function Card({ title, year, type, poster, key, item}) {
 
-	const [color, setColor] = useState(false);
-	const { addMovie } = useContext(MovieContext);
+	const { movies } = useContext(MovieContext);
+	const changeFavoritElement = movies.some(el => el.imdbID === item.imdbID);
 
-
-	function actionWitnItem() {
-		setColor(!color);
-		
-	}
 
 	return (
 		<div className={styles['card']} key={key}>
-			<div className={color === false ? styles['card__favorite'] : styles['card_favorite-clecked']} onClick={actionWitnItem}><img src="../../../public/shape.svg" alt="" /></div>
+			<div className={!changeFavoritElement ? styles['card__favorite'] : styles['card_favorite-added']}><img src="../../../public/shape.svg" alt="" /></div>
 			<img className={styles['card__img']} src={poster} alt="movie"/>
 			<div className={styles['info-movie']}>
 				<div className={styles['info-movie__title']}>{title}</div>
